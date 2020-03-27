@@ -11,6 +11,8 @@
 
 int 		*opencl_calc(t_cl *cl, t_elems *elems);
 void 		init_opencl_structs(void);
+void 		init_user_cl_structs(t_cl *cl);
+t_elems		*init_opencl_elems(int NDR, char *k_name, char *ft_name);
 void 		load_kernel_src_code(char *kernel, t_cl *cl);
 void 		get_cl_info(t_cl *cl);
 void 		create_context_coms_queue(t_cl *cl);

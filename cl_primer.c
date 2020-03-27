@@ -1,9 +1,8 @@
 #include "cl_primer.h"
 
 #include <stdio.h>
-#include <string.h>
 
-//TODO Write init and cleanup functions
+//TODO Write cleanup functions
 //TODO Format kernel.cl file
 //TODO Organise all files
 //TODO Write Makefile
@@ -13,26 +12,31 @@
 int 		main(void)
 {
 	//-------------------------------------------------------------------
-	// Init OpenCL structure
+	// Init OpenCL structures
 	//-------------------------------------------------------------------
 	t_cl		*cl;
+	t_elems		*elems;
 
-	cl = (t_cl *)malloc(sizeof(t_cl));
+	cl = init_opencl_structs();
+
+	//-------------------------------------------------------------------
+	// Init OpenCL structures for your data
+	//
+	// Change this function to suit you
+	//
+	// First argument - NDRange - total number of elements in the array to be processed
+	// Second argument - name of your kernel file
+	// Third argument - name of the vector function to be called in the kernel file
+	//-------------------------------------------------------------------
+	elems = init_opencl_elems(1024, "kernel.cl", "vector_add");
 
 	//-------------------------------------------------------------------
 	//Create 2 input methods
 	//-------------------------------------------------------------------
-	t_elems		*elems;
 	int 		*res;
 	int 		i;
 
 	i = 0;
-	elems = (t_elems *)malloc(sizeof(t_elems));
-	elems->a = (int *)malloc(sizeof(int) * elems->NDRANGE);
-	elems->b = (int *)malloc(sizeof(int) * elems->NDRANGE);
-	elems->NDRANGE = 1024; //Total number of elements in the array to be processed
-	elems->kernel_name = strdup("kernel.cl");
-	elems->function_name = strdup("vector_add");
 	while (i < elems->NDRANGE)
 	{
 		elems->a[i] = i;
