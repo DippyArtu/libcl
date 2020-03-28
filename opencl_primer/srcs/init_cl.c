@@ -1,6 +1,4 @@
-#include "cl_primer.h"
-
-#include <string.h>
+#include "../includes/cl_primer.h"
 
 //-------------------------------------------------------------------
 // Init OpenCL structures
@@ -13,6 +11,7 @@ t_cl		*init_opencl_structs(void)
 	cl->context = (t_cl_context *)malloc(sizeof(t_cl_context));
 	cl->dev_info = (t_cl_dev_info *)malloc(sizeof(t_cl_dev_info));
 	cl->kernel_src = (t_cl_kernel_src *)malloc(sizeof(t_cl_kernel_src));
+	cl->kernel_src->source_str = (char *)malloc(MAX_SOURCE_SIZE);
 	init_user_cl_structs(cl); //Init your structures here
 	return (cl);
 }
@@ -35,7 +34,7 @@ t_elems		*init_opencl_elems(int NDR, char *k_name, char *ft_name)
 	elems->NDRANGE = NDR; //Total number of elements in the array to be processed
 	elems->a = (int *)malloc(sizeof(int) * elems->NDRANGE);
 	elems->b = (int *)malloc(sizeof(int) * elems->NDRANGE);
-	elems->kernel_name = strdup(k_name);
-	elems->function_name = strdup(ft_name);
+	elems->kernel_name = k_name;
+	elems->function_name = ft_name;
 	return (elems);
 }

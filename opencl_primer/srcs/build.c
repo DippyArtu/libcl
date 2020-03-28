@@ -1,16 +1,15 @@
-#include "cl_primer.h"
+#include "../includes/cl_primer.h"
 
 #include <stdio.h>
 
 void 		load_kernel_src_code(char *kernel, t_cl *cl)
 {
 	cl->kernel_src->fd = open(kernel, O_RDONLY);
-	if (!cl->kernel_src->fd)
+	if (cl->kernel_src->fd <= 0)
 	{
 		printf("Failed to load kernel\n");
 		exit(1);
 	}
-	cl->kernel_src->source_str = (char *)malloc(MAX_SOURCE_SIZE);
 	cl->kernel_src->source_size = read(cl->kernel_src->fd, cl->kernel_src->source_str,\
 			MAX_SOURCE_SIZE);
 	close(cl->kernel_src->fd);

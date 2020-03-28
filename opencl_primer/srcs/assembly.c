@@ -1,4 +1,4 @@
-#include "cl_primer.h"
+#include "../includes/cl_primer.h"
 
 void 		prep_kernel(t_cl *cl, char *kernel_name)
 {

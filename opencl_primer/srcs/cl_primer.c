@@ -1,4 +1,4 @@
-#include "cl_primer.h"
+#include "../includes/cl_primer.h"
 
 int 		*opencl_calc(t_cl *cl, t_elems *elems)
 {
@@ -39,7 +39,9 @@ int 		*opencl_calc(t_cl *cl, t_elems *elems)
 	//Execute the OpenCL kernel on the list
 	//
 	//You can go into the function and change the size of a work group
-	exec_kernel(cl);
+	//
+	//Send NDRANGE to this function
+	exec_kernel(cl, elems->NDRANGE);
 
 	//-------------------------------------------------------------------
 	//Allocate memory for the local variable C and

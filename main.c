@@ -1,13 +1,6 @@
-#include "cl_primer.h"
+#include "opencl_primer/includes/cl_primer.h"
 
-#include <stdio.h>
-
-//TODO Write cleanup functions
-//TODO Format kernel.cl file
-//TODO Organise all files
-//TODO Write Makefile
-//TODO Separate main function
-//TODO Test
+#include <stdio.h> //There is another printf and stdio include in the build.c file
 
 int 		main(void)
 {
@@ -28,7 +21,7 @@ int 		main(void)
 	// Second argument - name of your kernel file
 	// Third argument - name of the vector function to be called in the kernel file
 	//-------------------------------------------------------------------
-	elems = init_opencl_elems(1024, "kernel.cl", "vector_add");
+	elems = init_opencl_elems(1024, "kernels/kernel.cl", "vector_add");
 
 	//-------------------------------------------------------------------
 	//Create 2 input methods
@@ -68,8 +61,12 @@ int 		main(void)
 
 	//-------------------------------------------------------------------
 	//Clean up everything else
+	//
+	//Go into "cl_clean_structs" and free all your structs
+	//
+	//res is allocated in the "read_buff" function in "execute_kernel.c" file
 	//-------------------------------------------------------------------
-	free(&elems->a);
-	free(&elems->b);
-	free(&res);
+	cl_clean_structs(cl, elems);
+	//free(&res);
+	res = NULL;
 }
