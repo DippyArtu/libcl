@@ -18,7 +18,7 @@ int 		main(void)
 	// Change this function to suit you
 	//
 	// First argument - NDRange - total number of elements in the array to be processed
-	// Second argument - name of your kernel file
+	// Second argument - name of your kernel file (place it in the "kernels" folder
 	// Third argument - name of the vector function to be called in the kernel file
 	//-------------------------------------------------------------------
 	elems = init_opencl_elems(1024, "kernels/kernel.cl", "vector_add");
