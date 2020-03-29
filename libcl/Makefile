@@ -1,9 +1,9 @@
-NAME = opencl_primer.a
+NAME = libcl.a
 
 SRC_DIR = ./srcs/
 SRC =		assembly.c\
 			build.c\
-			cl_primer.c\
+			libcl.c\
 			clean_up.c\
 			execute_kernel.c\
 			get_dev_info.c\
@@ -13,7 +13,7 @@ OBJ = $(SRC:.c=.o)
 OBJ_DIR = ./obj/
 OBJS = $(addprefix $(OBJ_DIR), $(OBJ))
 
-INC = 		cl_primer.h\
+INC = 		libcl.h\
 			cl_structs.h\
 			cl_user_structs.h
 

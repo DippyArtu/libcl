@@ -1,5 +1,5 @@
-#ifndef _CL_PRIMER_H_
-# define _CL_PRIMER_H_
+#ifndef _LIBCL_H_
+# define _LIBCL_H_
 
 # ifndef _STDLIB_H_
 #  include <stdlib.h>

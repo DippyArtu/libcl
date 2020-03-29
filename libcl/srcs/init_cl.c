@@ -1,4 +1,4 @@
-#include "../includes/cl_primer.h"
+#include "../includes/libcl.h"
 
 //-------------------------------------------------------------------
 // Init OpenCL structures

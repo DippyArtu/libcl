@@ -1,4 +1,4 @@
-#include "opencl_primer/includes/cl_primer.h"
+#include "libcl/includes/libcl.h"
 
 #include <stdio.h> //There is another printf and stdio include in the build.c file
 

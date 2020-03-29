@@ -1,4 +1,4 @@
-#include "../includes/cl_primer.h"
+#include "../includes/libcl.h"
 
 void 		cl_clean_mem_objs(t_cl *cl)
 {
