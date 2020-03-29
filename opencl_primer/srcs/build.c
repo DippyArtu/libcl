@@ -51,7 +51,7 @@ void 		create_buffs(t_cl *cl, int *a, int *b, int NDRANGE)
 	cpy_to_buffs(cl, a, b, NDRANGE);
 }
 
-void 		cpy_to_buffs(t_cl *cl, int *a, int *b, int LIST_SIZE)
+void 		cpy_to_buffs(t_cl *cl, int *a, int *b, int NDRANGE)
 {
 	//-------------------------------------------------------------------
 	//Copy the lists A and B to their respective memory buffers as per template below
@@ -60,9 +60,9 @@ void 		cpy_to_buffs(t_cl *cl, int *a, int *b, int LIST_SIZE)
 	//Change "sizeof(int) to the appropriate type
 	//Change "a" to appropriate pointer
 	cl->dev_info->ret = clEnqueueWriteBuffer(cl->context->command_queue,\
-			cl->items->a_mem_obj, CL_TRUE, 0, LIST_SIZE * sizeof(int), a,\
+			cl->items->a_mem_obj, CL_TRUE, 0, NDRANGE * sizeof(int), a,\
 			0, NULL, NULL);
 	cl->dev_info->ret = clEnqueueWriteBuffer(cl->context->command_queue,\
-			cl->items->b_mem_obj, CL_TRUE, 0, LIST_SIZE * sizeof(int), b,\
+			cl->items->b_mem_obj, CL_TRUE, 0, NDRANGE * sizeof(int), b,\
 			0, NULL, NULL);
 }

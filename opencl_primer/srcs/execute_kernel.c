@@ -1,4 +1,4 @@
-#include "cl_primer.h"
+#include "../includes/cl_structs.h"
 
 void 		exec_kernel(t_cl *cl, int NDRANGE)
 {

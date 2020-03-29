@@ -14,7 +14,8 @@ OBJ_DIR = ./obj/
 OBJS = $(addprefix $(OBJ_DIR), $(OBJ))
 
 INC = 		cl_primer.h\
-			cl_structs.h
+			cl_structs.h\
+			cl_user_structs.h
 
 INC_DIR = ./includes/
 INCS = $(addprefix $(INC_DIR), $(INC))

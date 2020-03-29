@@ -12,7 +12,8 @@ CL_OBJS = $(addprefix $(CL_OBJ_DIR), $(CL_OBJ))
 CL_SRC_DIR = ./opencl_primer/srcs/
 
 CL_INC = 	cl_primer.h\
-			cl_structs.h
+			cl_structs.h\
+			cl_user_structs.h
 
 CL_INC_DIR = ./opencl_primer/includes/
 CL_INCS = $(addprefix $(CL_INC_DIR), $(CL_INC))

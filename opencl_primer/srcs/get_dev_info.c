@@ -1,4 +1,4 @@
-#include "cl_primer.h"
+#include "../includes/cl_structs.h"
 
 void 		get_cl_info(t_cl *cl)
 {

@@ -19,7 +19,7 @@ int 		*opencl_calc(t_cl *cl, t_elems *elems)
 	create_context_coms_queue(cl);
 
 	//-------------------------------------------------------------------
-	//Create memory buffers on the device for each vector &&
+	//Create memory buffers on the device for each vector &
 	//Copy the lists A and B to their respective memory buffers
 	//
 	//Instead of "a", "b", pass actual pointers to the input arrays
@@ -44,8 +44,8 @@ int 		*opencl_calc(t_cl *cl, t_elems *elems)
 	exec_kernel(cl, elems->NDRANGE);
 
 	//-------------------------------------------------------------------
-	//Allocate memory for the local variable C and
-	//read the memory buffer C on the device to the local variable C
+	//Allocate memory for the local variable res and
+	//read the memory buffer C on the device to the local variable res
 	//
 	//Go change this function to suit your needs
 	res = read_buff(cl, elems->NDRANGE);
