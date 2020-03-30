@@ -1,4 +1,4 @@
-#include "../includes/libcl.h"
+#include "libcl.h"
 
 int 		*opencl_calc(t_cl *cl, t_elems *elems)
 {

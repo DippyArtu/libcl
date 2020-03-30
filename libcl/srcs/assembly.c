@@ -1,4 +1,4 @@
-#include "../includes/libcl.h"
+#include "libcl.h"
 
 void 		prep_kernel(t_cl *cl, char *kernel_name)
 {

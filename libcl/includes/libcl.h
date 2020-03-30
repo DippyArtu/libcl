@@ -5,7 +5,7 @@
 #  include <stdlib.h>
 # endif
 
-# include "../includes/cl_structs.h"
+# include "cl_structs.h"
 
 # define MAX_SOURCE_SIZE (0x100000)
 

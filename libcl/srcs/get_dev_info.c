@@ -1,4 +1,4 @@
-#include "../includes/cl_structs.h"
+#include "libcl.h"
 
 void 		get_cl_info(t_cl *cl)
 {

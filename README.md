@@ -83,7 +83,6 @@ Test project will perform 1024 additions `(0 + 1024, 1 + 1023, ...., 1023 + 1)` 
 
  - If you choose to compile from sources (without **Makefile**), don't forget the `-framework OpenCL` flag.
  - **Be careful with memory leaks!** I'm sure there is some present in this project, as I couldn't test them due to the absence of MacOS Catalina support for *Valgrind*. I'll sort this out when I'll have a VM with High Sierra set up.
- - Header `#include`'s contain the full path to the header file - **this isn't required!** But my IDE (CLion) decided all of the sudden to force me to shove it in for the *code insights* to function.
  - There is a `stdlib` include (with a define protection) in the **libcl.h** file.
  - There is a `stdio` and a `printf` function used in the **main.c** and **build.c** files (*this is a heads-up for 42 students*).
 

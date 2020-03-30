@@ -1,4 +1,4 @@
-#include "../includes/cl_structs.h"
+#include "libcl.h"
 
 void 		exec_kernel(t_cl *cl, int NDRANGE)
 {
