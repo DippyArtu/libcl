@@ -67,6 +67,6 @@ int 		main(void)
 	//res is allocated in the "read_buff" function in "execute_kernel.c" file
 	//-------------------------------------------------------------------
 	cl_clean_structs(cl, elems);
-	//free(&res);
+	free(res);
 	res = NULL;
 }
