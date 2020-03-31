@@ -4,7 +4,6 @@ __kernel void		vector_add(__global const int *a, __global const int *b, __global
 	int 	i;
 
 	i = get_global_id(0);
-
-	//Perform operation
+	//Add elements together
 	c[i] = a[i] +  b[i];
 }
