@@ -2,8 +2,21 @@
 
 #include <stdio.h> //There is another printf and stdio include in the build.c file
 
+//-------------------------------------------------------------------------------------
+// DON'T FORGET TO CONFIGURE MAKEFILES WITH YOUR FILES AND DIRS (USE CURRENT STRUCTURE)
+//-------------------------------------------------------------------------------------
+
 int 		main(void)
 {
+	//-------------------------------------------------------------------
+	// Init test input structure
+	//-------------------------------------------------------------------
+	t_test		*test;
+
+	test = (t_test *)malloc(sizeof(t_test));
+	test->val1 = 4;
+	test->val2 = 2;
+
 	//-------------------------------------------------------------------
 	// Init OpenCL structures
 	//-------------------------------------------------------------------
@@ -17,11 +30,14 @@ int 		main(void)
 	//
 	// Change this function to suit you
 	//
-	// First argument - NDRange - total number of elements in the array to be processed
-	// Second argument - name of your kernel file (place it in the "kernels" folder
-	// Third argument - name of the vector function to be called in the kernel file
+	// 1 argument - NDRange - total number of elements in the array to be processed
+	// 2 argument - name of your kernel file (place it in the "kernels" folder
+	// 3 argument - name of the vector function to be called in the kernel file
+	// 4 argument - path to the header file included in kernel, KEEP THE "-I". The header should be included in kernel file.
+	// 				If none, pass NULL.
 	//-------------------------------------------------------------------
-	elems = init_opencl_elems(1024, "kernels/kernel.cl", "vector_add");
+	elems = init_opencl_elems(1024, "./kernels/kernel.cl", "vector_add", "-I ./kernel_includes");
+	elems->test = test;
 
 	//-------------------------------------------------------------------
 	//Create 2 input methods
@@ -48,7 +64,7 @@ int 		main(void)
 	i = 0;
 	while (i < elems->NDRANGE)
 	{
-		printf("%d + %d = %d\n", elems->a[i], elems->b[i], res[i]);
+		printf("%d + %d  + 4 + 2 = %d\n", elems->a[i], elems->b[i], res[i]);
 		i++;
 	}
 

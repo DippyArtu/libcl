@@ -15,12 +15,17 @@ OBJS = $(addprefix $(OBJ_DIR), $(OBJ))
 
 INC = 		libcl.h\
 			cl_structs.h\
-			cl_user_structs.h
+			cl_user_structs.h\
+			cl_errors.h
 
 INC_DIR = ./includes/
 INCS = $(addprefix $(INC_DIR), $(INC))
 
-FLAGS = -g -Wall -Werror -Wextra -I$(INC_DIR)
+KERNEL_INC = kernel_structs.h
+KERNEL_INC_DIR = ../kernel_includes/
+KERNEL_INCS = $(addprefix $(KERNEL_INC_DIR), $(KERNEL_INC))
+
+FLAGS = -g -Wall -Werror -Wextra -I$(INC_DIR) -I$(KERNEL_INC_DIR)
 
 all: $(NAME)
 
@@ -28,7 +33,7 @@ $(NAME): $(OBJS)
 		@ar rc $(NAME) $(OBJS)
 		ranlib $(NAME)
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS) $(KERNEL_INCS)
 		gcc $(FLAGS) -o $@ -c $<
 
 clean:

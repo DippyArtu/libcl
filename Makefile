@@ -18,9 +18,13 @@ CL_INC = 	libcl.h\
 CL_INC_DIR = ./libcl/includes/
 CL_INCS = $(addprefix $(CL_INC_DIR), $(CL_INC))
 
+INC = 		kernel_structs.h
+INC_DIR = ./kernel_includes/
+INCS = $(addprefix $(INC_DIR), $(INC))
+
 LIBRARIES = -framework OpenCL
 
-FLAGS = -g -Wall -Wextra -Werror -I$(CL_INC_DIR)
+FLAGS = -g -Wall -Wextra -Werror -I$(CL_INC_DIR) -I$(INC_DIR)
 
 all: $(NAME)
 
@@ -34,7 +38,7 @@ $(OBJ_DIR):
 $(CL_OBJ_DIR)%.o: $(CL_SRC_DIR)%.c $(CL_INCS)
 		@make -C libcl
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INCS)
 		gcc $(FLAGS) -o $@ -c $<
 
 clean:

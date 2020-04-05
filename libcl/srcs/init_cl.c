@@ -26,7 +26,7 @@ void 		init_user_cl_structs(t_cl *cl)
 	cl->items = (t_cl_items *)malloc(sizeof(t_cl_items));
 }
 
-t_elems		*init_opencl_elems(int NDR, char *k_name, char *ft_name)
+t_elems		*init_opencl_elems(int NDR, char *k_name, char *ft_name, char *inc)
 {
 	t_elems			*elems;
 
@@ -36,5 +36,6 @@ t_elems		*init_opencl_elems(int NDR, char *k_name, char *ft_name)
 	elems->b = (int *)malloc(sizeof(int) * elems->NDRANGE);
 	elems->kernel_name = k_name;
 	elems->function_name = ft_name;
+	elems->include_flag = inc;
 	return (elems);
 }
