@@ -85,4 +85,8 @@ int 		main(void)
 	cl_clean_structs(cl, elems);
 	free(res);
 	res = NULL;
+	free(test);
+	test = NULL;
+
+	return (0);
 }

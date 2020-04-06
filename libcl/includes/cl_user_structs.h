@@ -1,7 +1,7 @@
 #ifndef _CL_USER_STRUCTS_H_
-#define _CL_USER_STRUCTS_H_
+# define _CL_USER_STRUCTS_H_
 
-#include "kernel_structs.h"
+# include "kernel_structs.h"
 
 //----------------------------------------------------------------
 // This file contains structures containing objects for OpenCL to work with

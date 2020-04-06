@@ -9,7 +9,7 @@
 **You should educate yourself closely with the in-code comments as well as the code.**  
 
 ## Changelog
-- Memory leaks are solved
+- Memory leaks are solved (you should still check tho, just in case)
 - Now you can learn how to pass a user-defined structure into the kernel
 - Error handling implemetned
 - Now you can create a header for the kernel file and include it into the program build
