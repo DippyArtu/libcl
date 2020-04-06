@@ -73,7 +73,7 @@ int 		main(void)
 	//
 	//Go into this function, and change "cl_clean_mem_objs" to clean up your memory objects
 	//-------------------------------------------------------------------
-	cl_clean_up(cl);
+	cl_clean_up_all(cl);
 
 	//-------------------------------------------------------------------
 	//Clean up everything else

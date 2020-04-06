@@ -22,6 +22,7 @@ void 		prep_kernel(t_cl *cl, char *kernel_name, char *include);
 void 		set_kernel_args(t_cl *cl);
 void 		exec_kernel(t_cl *cl, int NDRANGE);
 int 		*read_buff(t_cl *cl, int NDRANGE);
+void 		cl_clean_up_all(t_cl *cl);
 void 		cl_clean_up(t_cl *cl);
 void 		cl_clean_mem_objs(t_cl *cl);
 void 		cl_clean_structs(t_cl *cl, t_elems *elems);

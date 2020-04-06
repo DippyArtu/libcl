@@ -13,7 +13,6 @@ void 		cl_clean_mem_objs(t_cl *cl)
 	di->ret = clReleaseMemObject(its->a_mem_obj);
 	di->ret = clReleaseMemObject(its->b_mem_obj);
 	di->ret = clReleaseMemObject(its->c_mem_obj);
-
 }
 
 void 		cl_clean_structs(t_cl *cl, t_elems *elems)
@@ -44,7 +43,7 @@ void 		cl_clean_structs(t_cl *cl, t_elems *elems)
 	cl = NULL;
 }
 
-void 		cl_clean_up(t_cl *cl)
+void 		cl_clean_up_all(t_cl *cl)
 {
 	t_cl_dev_info		*di;
 
@@ -56,4 +55,14 @@ void 		cl_clean_up(t_cl *cl)
 	cl_clean_mem_objs(cl); //Change this function to clean your memory objects
 	di->ret = clReleaseCommandQueue(cl->context->command_queue);
 	di->ret = clReleaseContext(cl->context->context);
+}
+
+void 		cl_clean_up(t_cl *cl)
+{
+	t_cl_dev_info		*di;
+
+	di = cl->dev_info;
+	di->ret = clReleaseKernel(cl->context->kernel);
+	di->ret = clReleaseProgram(cl->context->program);
+	cl_clean_mem_objs(cl); //Change this function to clean your memory objects
 }
