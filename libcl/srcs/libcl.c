@@ -3,8 +3,6 @@
 int 		*opencl_calc(t_cl *cl, t_elems *elems)
 {
 	int 		*res;
-	//Load the kernel source code into the array source_str
-	load_kernel_src_code(elems->kernel_name, cl);
 
 	//Get platform and device information
 	//---------------------------------------------------------------------------------
@@ -17,6 +15,9 @@ int 		*opencl_calc(t_cl *cl, t_elems *elems)
 	//-------------------------------------------------------------------
 	//Create an OpenCl context & command queue
 	create_context_coms_queue(cl);
+
+	//Load the kernel source code into the array source_str
+	load_kernel_src_code(elems->kernel_name, cl);
 
 	//-------------------------------------------------------------------
 	//Create memory buffers on the device for each vector &

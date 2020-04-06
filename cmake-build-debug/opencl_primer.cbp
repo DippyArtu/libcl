@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="opencl_primer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/abrar/Code/libcl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/abrar/Code/libcl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/abrar/Code/libcl/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencl_primer">
+				<Option output="/Users/abrar/Code/libcl/cmake-build-debug/libopencl_primer.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/abrar/Code/libcl/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 opencl_primer"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="opencl_primer/fast">
+				<Option output="/Users/abrar/Code/libcl/cmake-build-debug/libopencl_primer.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/abrar/Code/libcl/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 opencl_primer/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/abrar/Code/libcl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/abrar/Code/libcl/kernels/kernel.cl">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/main.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/includes/cl_primer.h">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/includes/cl_structs.h">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/includes/cl_user_structs.h">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/assembly.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/build.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/cl_primer.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/clean_up.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/execute_kernel.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/get_dev_info.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/opencl_primer/srcs/init_cl.c">
+			<Option target="opencl_primer"/>
+		</Unit>
+		<Unit filename="/Users/abrar/Code/libcl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
