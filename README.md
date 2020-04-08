@@ -71,7 +71,7 @@
 |`void exec_kernel(t_cl *cl, int NDRange);`|Executes OpenCL kernel on the given list|None    
 |`int *read_buff(t_cl *cl, int NDRange);`|Allocates memory for the local variable *res* containing results of a calculation and reads the memory buffer *C* on the device to the local variable *res*|Pointer to the memory area containing results of a calculation 
 |`void cl_clean_up(t_cl *cl);`|Releases kernel, program and assosiated memory objects. Device, platform, command queue and context are saved for reuse|None   
-|`void cl_clean_up_all(t_cl *cl);`|Cleans up all OpenCL service data|None    
+|`void cl_clean_up_all(t_cl *cl);`|Cleans up all OpenCL service data _(This function should not be used after `cl_clean_up()`, as this will most likely cause a sig fault._|None    
 |`void cl_clean_mem_objs(t_cl *cl);`|Cleans up OpenCL memory areas|None    
 |`void cl_clean_structs(t_cl *cl, t_elems *elems);`|Cleans up structures|None    
     
