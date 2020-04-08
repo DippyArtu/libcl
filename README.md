@@ -10,7 +10,7 @@
       
 **You should educate yourself closely with the in-code comments as well as the code.**   
 ## Changelog  (latest marked in bold)
-- **Now you have an option to flush only the kernel and program, saving the context and all other service info for repeated use in your program by invoking `cl_clean_up(t_cl *cl)` (caution, not tested yet!) P.S. allocations inside elements structure aren't freed**
+- **Now you have an option to flush only the kernel and program, saving the context and all other service info for repeated use in your program by invoking `cl_clean_up(t_cl *cl)` (caution, not fully tested yet!) P.S. allocations inside elements structure aren't freed**
 - Memory leaks are solved (you should still check tho, just in case)  
 - Now you can learn how to pass a user-defined structure into the kernel  
 - Error handling implemetned  
