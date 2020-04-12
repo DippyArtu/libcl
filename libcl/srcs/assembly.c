@@ -17,14 +17,11 @@ void 		print_log(t_cl *cl)
 	exit(1);
 }
 
-void 		prep_kernel(t_cl *cl, char *kernel_ft, char *include)
+void 		create_program(t_cl *cl)
 {
 	t_cl_context		*cntx;
-	cl_int 				err;
 
 	cntx = cl->context;
-
-	//Create a program from the kernel source
 	cntx->program = clCreateProgramWithSource(cntx->context, 1,\
 			(const char **)&cl->kernel_src->source_str,\
 			(const size_t *)&cl->kernel_src->source_size,\
@@ -34,17 +31,33 @@ void 		prep_kernel(t_cl *cl, char *kernel_ft, char *include)
 		printf(PROGRAM_ERR);
 		exit(1);
 	}
+}
 
-	//Build the program
+void 		build_program(t_cl *cl, char *include)
+{
+	t_cl_context		*cntx;
+	cl_int 				err;
+
+	cntx = cl->context;
 	err = cl->dev_info->ret = clBuildProgram(cntx->program, 1,\
 			&cl->dev_info->device_id, include, NULL, NULL);
 	if (cl->dev_info->ret < 0)
 		print_log(cl);
+}
 
+void 		prep_kernel(t_cl *cl, char *kernel_ft, char *include)
+{
+	t_cl_context		*cntx;
+
+	cntx = cl->context;
+	create_program(cl); //Create a program from the kernel source
+	build_program(cl, include); //Build the program
 	//Create the OpenCL kernel
-	cntx->kernel = clCreateKernel(cntx->program, kernel_ft, &cl->dev_info->ret);
+	cntx->kernel = clCreateKernel(cntx->program,\
+			kernel_ft, &cl->dev_info->ret);
 	if (cl->dev_info->ret < 0)
 	{
+		printf("%i\n", cl->dev_info->ret);
 		printf(KERNEL_CREAT_ERR);
 		exit(1);
 	}

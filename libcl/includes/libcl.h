@@ -18,6 +18,8 @@ void 		get_cl_info(t_cl *cl);
 void 		create_context_coms_queue(t_cl *cl);
 void 		create_buffs(t_cl *cl, t_elems *elems);
 void 		cpy_to_buffs(t_cl *cl, int *a, int *b, int NDRANGE);
+void 		create_program(t_cl *cl);
+void 		build_program(t_cl *cl, char *include);
 void 		prep_kernel(t_cl *cl, char *kernel_ft, char *include);
 void 		set_kernel_args(t_cl *cl);
 void 		exec_kernel(t_cl *cl, int NDRANGE);
