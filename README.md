@@ -70,7 +70,7 @@ For example, one of the calculations will be this:
 |`void create_context_coms_queue(t_cl *cl);`|Creates an OpenCl context & command queue|None      
 |`void create_buffs(t_cl *cl, int *a, int *b, int NDRange);`|Creates memory buffers on the device for each input vector (a & b)|None      
 |`void cpy_to_buffs(t_cl *cl, int *a, int *b, int NDRange);`|Copies lists A and B to their respective memory buffers|None      
-|`void prep_kernel(t_cl *cl, char *kernel_name);`|Creates a program from the kernel source, builds the program & creates OpenCL kernel| None      
+|`void prep_kernel(t_cl *cl, char *kernel_ft);`|Creates a program from the kernel source, builds the program & creates OpenCL kernel| None      
 |`void set_kernel_args(t_cl *cl);`|Sets kernel arguments|None      
 |`void exec_kernel(t_cl *cl, int NDRange);`|Executes OpenCL kernel on the given list|None      
 |`int *read_buff(t_cl *cl, int NDRange);`|Allocates memory for the local variable *res* containing results of a calculation and reads the memory buffer *C* on the device to the local variable *res*|Pointer to the memory area containing results of a calculation   

@@ -17,7 +17,7 @@ void 		print_log(t_cl *cl)
 	exit(1);
 }
 
-void 		prep_kernel(t_cl *cl, char *kernel_name, char *include)
+void 		prep_kernel(t_cl *cl, char *kernel_ft, char *include)
 {
 	t_cl_context		*cntx;
 	cl_int 				err;
@@ -42,7 +42,7 @@ void 		prep_kernel(t_cl *cl, char *kernel_name, char *include)
 		print_log(cl);
 
 	//Create the OpenCL kernel
-	cntx->kernel = clCreateKernel(cntx->program, kernel_name, &cl->dev_info->ret);
+	cntx->kernel = clCreateKernel(cntx->program, kernel_ft, &cl->dev_info->ret);
 	if (cl->dev_info->ret < 0)
 	{
 		printf(KERNEL_CREAT_ERR);
