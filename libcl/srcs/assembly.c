@@ -43,7 +43,6 @@ void 		prep_kernel(t_cl *cl, char *kernel_name, char *include)
 
 	//Create the OpenCL kernel
 	cntx->kernel = clCreateKernel(cntx->program, kernel_name, &cl->dev_info->ret);
-	set_kernel_args(cl);
 	if (cl->dev_info->ret < 0)
 	{
 		printf(KERNEL_CREAT_ERR);

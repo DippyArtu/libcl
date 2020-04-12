@@ -25,6 +25,7 @@ int 		main(void)
 
 	cl = init_opencl_structs();
 
+
 	//-------------------------------------------------------------------
 	// Init OpenCL structures for your data
 	//
@@ -73,6 +74,7 @@ int 		main(void)
 	//
 	//Go into this function, and change "cl_clean_mem_objs" to clean up your memory objects
 	//-------------------------------------------------------------------
+	cl_clean_up(cl);
 	cl_clean_up_all(cl);
 
 	//-------------------------------------------------------------------

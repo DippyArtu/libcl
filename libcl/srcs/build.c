@@ -73,6 +73,7 @@ void 		create_buffs(t_cl *cl, t_elems *elems)
 		printf(BUFF_CREAT_ERR);
 		exit(1);
 	}
+	set_kernel_args(cl);
 }
 
 void 		cpy_to_buffs(t_cl *cl, int *a, int *b, int NDRANGE)
