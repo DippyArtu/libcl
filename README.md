@@ -10,7 +10,12 @@
 <p><strong>You should educate yourself closely with the in-code comments as well as the code.</strong></p>
 <h2 id="changelog--latest-marked-in-bold">Changelog  (latest marked in bold)</h2>
 <ul>
-<li><strong>Updated reuse logic - please refer to the in-code comment section in the <code>cl_clean_up();</code> function for information on how to reuse a kernel + work with multiple kernels</strong></li>
+<li><strong>Now supports complex arithmetics! Simply <code>#include "cl_complex.h.cl"</code> in your kernel file!</strong>
+<ul>
+<li>More info <a href="https://github.com/DippyArtu/complex_opencl">here</a></li>
+</ul>
+</li>
+<li>Updated reuse logic - please refer to the in-code comment section in the <code>cl_clean_up();</code> function for information on how to reuse a kernel + work with multiple kernels</li>
 <li>Now you have an option to reuse your kernel and program, by cleaning only memory objects assosiated with it via invoking <code>cl_clean_up(t_cl *cl)</code> P.S. allocations inside elements structure aren’t freed</li>
 <li>Memory leaks are solved (you should still check tho, just in case)</li>
 <li>Now you can learn how to pass a user-defined structure into the kernel</li>
