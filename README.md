@@ -204,4 +204,3 @@
 <h2 id="credit">Credit</h2>
 <p>This project is based on the <a href="https://github.com/smistad/OpenCL-Getting-Started">OpenCL-Getting-Started</a> project by Erik Smistad (@smistad).</p>
 
-agr
