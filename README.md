@@ -46,7 +46,7 @@
 <li>Your structures should be placed inside the <strong>cl_user_structs.h</strong> file and initialized properly.</li>
 </ul>
 </li>
-<li><strong><a href="http://kernel.cl">kernel.cl</a></strong> is a file containing instructions to be executed in on the OpenCL device.
+<li>kernel.cl is a file containing instructions to be executed in on the OpenCL device.
 <ul>
 <li>Those should be placed in the <strong>kernels</strong> folder at the root of the project.</li>
 </ul>
