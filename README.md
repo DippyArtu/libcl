@@ -46,7 +46,7 @@
 <li>Your structures should be placed inside the <strong>cl_user_structs.h</strong> file and initialized properly.</li>
 </ul>
 </li>
-<li>kernel.cl is a file containing instructions to be executed in on the OpenCL device.
+<li><strong><a href="http://kernel.cl">kernel.cl</a></strong> is a file containing instructions to be executed in on the OpenCL device.
 <ul>
 <li>Those should be placed in the <strong>kernels</strong> folder at the root of the project.</li>
 </ul>
@@ -201,6 +201,4 @@
 <li>If you choose to compile from sources (without <strong>Makefile</strong>), don’t forget the <code>-framework OpenCL</code> flag.</li>
 <li>Be informed, that this project uses <code>&lt;stdio.h&gt;</code> and <code>&lt;stdlib&gt;</code> includes.</li>
 </ul>
-<h2 id="credit">Credit</h2>
-<p>This project is based on the <a href="https://github.com/smistad/OpenCL-Getting-Started">OpenCL-Getting-Started</a> project by Erik Smistad (@smistad).</p>
 
